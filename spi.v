@@ -36,7 +36,7 @@ reg[6:0] clk_div_counter = 0;
 wire count_reached;
 reg r_spi_drv_rdy, r_sclk, r_SS_N;
 reg[SPI_MAXLEN-1:0] r_tx_data, r_rx_miso;
-reg[5:0] bits_transfered; // 6 bits for 32 possible values
+reg[4:0] bits_transfered; // 5 bits for 32 possible values
 
 assign MOSI = r_tx_data[SPI_MAXLEN-1];
 wire first_transfer;
